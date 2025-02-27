@@ -1,68 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>My Modern Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Unique Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --primary: #3498db;
-      --secondary: #2ecc71;
-      --background: #f9f9f9;
-      --text-color: #333;
-      --card-bg: #fff;
-      --shadow: rgba(0, 0, 0, 0.1);
-    }
+    /* Global Reset */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
+    html, body {
+      height: 100%;
+    }
     body {
       font-family: 'Poppins', sans-serif;
-      background: var(--background);
-      color: var(--text-color);
-      line-height: 1.6;
+      background: #f0f2f5;
+      color: #333;
+      display: flex;
+      flex-direction: column;
     }
+    /* Header */
     header {
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      width: 100%;
+      background: linear-gradient(135deg, #185a9d, #43cea2);
       color: #fff;
-      padding: 40px 0;
       text-align: center;
-      box-shadow: 0 2px 5px var(--shadow);
+      padding: 40px 20px;
     }
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: auto;
-      overflow: hidden;
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 0.5em;
     }
-    h1 {
-      font-weight: 600;
-      margin-bottom: 10px;
+    header p {
+      font-size: 1.2em;
     }
-    p {
-      font-size: 1.1em;
-      margin-bottom: 15px;
+    /* Main Section */
+    main {
+      flex: 1;
+      padding: 60px 20px;
+      background: #f0f2f5;
     }
-
     .portfolio {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 30px;
-      margin: 40px 0;
+      max-width: 1200px;
+      margin: 0 auto;
     }
     .portfolio-item {
-      background: var(--card-bg);
+      background: #fff;
       border-radius: 10px;
       overflow: hidden;
-      box-shadow: 0 4px 8px var(--shadow);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
     }
     .portfolio-item:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 8px 16px var(--shadow);
+      transform: translateY(-8px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
     }
     .portfolio-item img {
       width: 100%;
@@ -72,71 +69,89 @@
       padding: 20px;
     }
     .portfolio-item h3 {
+      color: #185a9d;
       margin-bottom: 10px;
-      color: var(--primary);
+      font-size: 1.3em;
       font-weight: 600;
     }
     .portfolio-item p {
       font-size: 0.95em;
+      color: #666;
+      margin-bottom: 10px;
     }
- 
-    footer {
-      background: #333;
+    
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #fe6601;
       color: #fff;
-      text-align: center;
-      padding: 20px 0;
-      margin-top: 40px;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s, transform 0.3s;
+    }
+    .btn:hover {
+      background: #e05900;
+      transform: translateY(-3px);
     }
    
+    footer {
+      background: #185a9d;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+    
     @media (max-width: 768px) {
-      header, footer {
-        padding: 20px 0;
+      header {
+        padding: 30px 10px;
+      }
+      main {
+        padding: 40px 10px;
       }
     }
   </style>
 </head>
 <body>
   <header>
-    <div class="container">
-      <h1>My Modern Portfolio</h1>
-      <p>Showcasing future projects with a modern touch</p>
-    </div>
+    <h1>Portfolio</h1>
+    <p>Discover my creative projects</p>
   </header>
-
-  <div class="container">
+  <main>
     <section class="portfolio">
       <!-- Portfolio Item 1 -->
       <div class="portfolio-item">
-        <img src="" alt="Project 1" />
+        <img src="https://via.placeholder.com/400x250" alt="Project 1">
         <div class="content">
-          <h3>Project Title 1</h3>
-          <p>A brief description of the project. More details coming soon.</p>
+          <h3>Project One</h3>
+          <p>A creative exploration of modern design principles paired with practical functionality.</p>
+          <a href="#" class="btn">View Project</a>
         </div>
       </div>
       <!-- Portfolio Item 2 -->
       <div class="portfolio-item">
-        <img src="https://via.placeholder.com/400x250" alt="Project 2" />
+        <img src="https://via.placeholder.com/400x250" alt="Project 2">
         <div class="content">
-          <h3>Project Title 2</h3>
-          <p>A brief description of the project. More details coming soon.</p>
+          <h3>Project Two</h3>
+          <p>An innovative approach to web development that emphasizes responsive design and artistic flair.</p>
+          <a href="#" class="btn">View Project</a>
         </div>
       </div>
       <!-- Portfolio Item 3 -->
       <div class="portfolio-item">
-        <img src="https://via.placeholder.com/400x250" alt="Project 3" />
+        <img src="https://via.placeholder.com/400x250" alt="Project 3">
         <div class="content">
-          <h3>Project Title 3</h3>
-          <p>A brief description of the project. More details coming soon.</p>
+          <h3>Project Three</h3>
+          <p>A modern project that seamlessly combines minimalist design with an engaging user experience.</p>
+          <a href="#" class="btn">View Project</a>
         </div>
       </div>
       <!-- Additional portfolio items can be added here -->
     </section>
-  </div>
-
+  </main>
   <footer>
-    <div class="container">
-      <p>&copy; 2025 Nikola Masic. All rights reserved.</p>
-    </div>
+    <p>&copy; 2025 Nikola Masic. All rights reserved.</p>
   </footer>
 </body>
 </html>
